@@ -14,8 +14,11 @@ namespace EFCoreHomework1
     {
         public DbSet<Order> Orders { get; set; }
 
-        public EFCoreDbContext()
+        //private string _connectionString;
+
+        public EFCoreDbContext(/*string connectionString*/)
         {
+            //_connectionString = connectionString;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

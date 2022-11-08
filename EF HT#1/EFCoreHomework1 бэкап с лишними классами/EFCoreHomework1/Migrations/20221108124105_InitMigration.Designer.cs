@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreHomework1.Migrations
 {
     [DbContext(typeof(EFCoreDbContext))]
-    [Migration("20221026154039_InitMigration")]
+    [Migration("20221108124105_InitMigration")]
     partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,33 @@ namespace EFCoreHomework1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Sum = 100
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Sum = 200
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Sum = 300
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Sum = 400
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Sum = 500
+                        });
                 });
 #pragma warning restore 612, 618
         }
