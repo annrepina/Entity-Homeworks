@@ -4,6 +4,9 @@
 
 namespace EFCoreHomework1.Migrations
 {
+    /// <summary>
+    /// Миграция, которая инициализирует таблицу значениями по умолчанию
+    /// </summary>
     public partial class InitMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

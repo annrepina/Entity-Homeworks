@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCoreHomework1.Migrations
 {
+    /// <summary>
+    /// Миграция, которая изменяет значения столбцов Date c null на значения по умолчанию для этого столбца
+    /// </summary>
     public partial class ChangeDatesMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

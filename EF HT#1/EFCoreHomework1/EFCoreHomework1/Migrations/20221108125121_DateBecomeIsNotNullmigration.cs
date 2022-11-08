@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCoreHomework1.Migrations
 {
+    /// <summary>
+    /// Миграция, которая делает столбец Date не nullable
+    /// </summary>
     public partial class DateBecomeIsNotNullmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

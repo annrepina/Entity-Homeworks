@@ -23,8 +23,6 @@ namespace EFCoreHomework1
         public MainWindow()
         {
             InitializeComponent();
-
-            DataContext = new MainWindowViewModel();
         }
 
     }

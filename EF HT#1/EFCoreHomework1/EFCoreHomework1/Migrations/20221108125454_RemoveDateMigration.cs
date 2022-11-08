@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCoreHomework1.Migrations
 {
+    /// <summary>
+    /// Миграция, которая удаляет столбец Date из таблицы
+    /// </summary>
     public partial class RemoveDateMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

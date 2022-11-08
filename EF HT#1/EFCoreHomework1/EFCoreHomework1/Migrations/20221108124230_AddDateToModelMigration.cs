@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCoreHomework1.Migrations
 {
+    /// <summary>
+    /// Миграция, которая добавляет nullable столбец "Дата" в таблицу
+    /// </summary>
     public partial class AddDateToModelMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
