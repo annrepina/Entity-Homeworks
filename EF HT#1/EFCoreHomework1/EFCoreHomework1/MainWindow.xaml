@@ -11,11 +11,15 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Имя сервера" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
         <TextBox Grid.Row="1" Grid.Column="0" Width="200" MaxWidth="250" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5"
                  Text="{Binding DatabaseConnecting.ServerName, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding DatabaseConnecting.IsNotConnected}"/>
         <Button Grid.Row="2" Grid.Column="0" Content="Подключиться к срверу" Padding="5, 0, 5, 0" Margin="5, 0, 0, 0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsEnabled="{Binding DatabaseConnecting.CanConnect}" Command="{Binding OnConnectToServerCommand}"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="Добавить элементы" Padding="5, 0, 5, 0"  Margin="5,5,5,5" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding OnAddOrdersCommand}"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="Удалить элементы" Padding="5, 0, 5, 0"  Margin="5,5,5,5" HorizontalAlignment="Left"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding OnRemoveOrdersCommand}"/>
     </Grid>
 </Window>

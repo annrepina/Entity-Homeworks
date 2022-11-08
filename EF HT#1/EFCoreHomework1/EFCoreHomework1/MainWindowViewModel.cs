@@ -19,6 +19,10 @@ namespace EFCoreHomework1
 
         public DelegateCommand OnConnectToServerCommand { get; private set; }
 
+        public DelegateCommand OnAddOrdersCommand { get; private set; }
+
+        public DelegateCommand OnRemoveOrdersCommand { get; private set; }
+
         private DatabaseConnecting _databaseConnecting;
 
         public DatabaseConnecting DatabaseConnecting 
@@ -38,6 +42,7 @@ namespace EFCoreHomework1
             DatabaseConnecting = new DatabaseConnecting();
 
             OnConnectToServerCommand = new DelegateCommand(OnConnectToServer);
+            OnAddOrdersCommand = new DelegateCommand(OnAddOrders);
 
             Orders = new ObservableCollection<Order>();
         }
@@ -50,6 +55,20 @@ namespace EFCoreHomework1
         private void OnConnectToServer()
         {
             _databaseConnecting.FillDb();
+        }
+
+        private void OnAddOrders()
+        {
+            using (EFCoreDbContext db = new EFCoreDbContext())
+            {
+                Order order1 = new Order { Sum = 200 };
+                Order order2 = new Order { Sum = 300 };
+
+                // Добавление
+                db.Orders.Add(order1);
+                db.Orders.Add(order2);
+                db.SaveChanges();
+            }
 
 
         }
