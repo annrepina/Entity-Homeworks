@@ -7,34 +7,29 @@ using System.Threading.Tasks;
 namespace EFCoreHomework2.Entities
 {
     /// <summary>
-    /// Класс - студент
+    /// Класс - оценка
     /// </summary>
-    public class Student
+    public class Mark
     {
         /// <summary>
-        /// Id 
+        /// Id
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Имя
+        /// Значение оценки
         /// </summary>
-        public string FirstName { get; set; }
+        public int Value { get; set; }
 
         /// <summary>
-        /// Фамилия
+        /// Предмет - навигационное свойство
         /// </summary>
-        public string LastName { get; set; }
+        public Subject Subject { get; set; }
 
         /// <summary>
-        /// Дата рождения
+        /// Id предмета
         /// </summary>
-        public DateTime Birthday { get; set; }
-
-        /// <summary>
-        /// Номер телефона
-        /// </summary>
-        public string? PhoneNumber { get; set; }
+        public int SubjectId { get; set; }
 
         /// <summary>
         /// Зачетка - навигационное свойство
@@ -44,6 +39,6 @@ namespace EFCoreHomework2.Entities
         /// <summary>
         /// Id зачетки
         /// </summary>
-        public int StudentCardId { get; set; }
+        public int StudentCardId { get; set; }   
     }
 }
