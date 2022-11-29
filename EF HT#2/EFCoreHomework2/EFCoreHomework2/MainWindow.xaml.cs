@@ -25,6 +25,8 @@ namespace EFCoreHomework2
         public MainWindow()
         {
             // действия, выполняемые для тестирования связей
+            // в реальности данные действия должны выполняться в отдельном классе,
+            // но поскольку это просто тест, решила оставить пока так
             using (GroupDbContext db = new GroupDbContext())
             {
                 //StudentCard studentCard = new StudentCard() { SerialNumber = 153 };
